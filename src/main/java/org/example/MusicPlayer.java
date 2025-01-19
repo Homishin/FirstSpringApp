@@ -1,13 +1,22 @@
 package org.example;
 
-public class MusicPlayer {
-    private Music music;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
-    public MusicPlayer(Music music) {
-        this.music = music;
+public class MusicPlayer {
+    private List<Music> musicList = new ArrayList<>();
+
+
+    public MusicPlayer(){}
+
+    public void setMusic(List<Music> musicList) {
+        this.musicList = musicList;
     }
 
     public void play() {
-        System.out.println("Playing: " +music.getSong());
+        for (Music music : musicList) {
+            System.out.println(music.getSong());
+        }
     }
 }
