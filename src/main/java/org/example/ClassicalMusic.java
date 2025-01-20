@@ -1,11 +1,9 @@
 package org.example;
 
-public class ClassicalMusic implements Music {
-    private ClassicalMusic(){}
+import org.springframework.stereotype.Component;
 
-    public static ClassicalMusic getClassicalMusic(){
-        return new ClassicalMusic();
-    }
+@Component ("classicalMusic")
+public class ClassicalMusic implements Music {
 
 
     public void doMyInit(){
