@@ -1,20 +1,25 @@
 package org.example;
 
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 @Component
 public class ClassicalMusic implements Music {
+    List<String> list = new ArrayList<>();
+    Random random = new Random();
 
-
-    public void doMyInit(){
-        System.out.println("ClassicalMusic doMyInit");
+    public ClassicalMusic() {
+        list.add("«Времена года» Антонио Вивальди");
+        list.add("Каприз №24 Никколо Паганини.");
+        list.add("«Лунная соната» Людвига ван Бетховена");
     }
 
-    public void doMyDestroy(){
-        System.out.println("ClassicalMusic doMyDestroy");
-    }
 
     @Override
     public String getSong() {
-        return "Vivaldi - Summer";
+        return list.get(random.nextInt(list.size()));
     }
 }

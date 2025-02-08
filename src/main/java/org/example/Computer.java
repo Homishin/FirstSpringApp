@@ -15,6 +15,6 @@ public class Computer {
     }
 
     public String toString(){
-        return "Computer ID: " + id + " Music Player: " + musicPlayer.play();
+        return "Computer ID: " + id +" "+ musicPlayer.play(TypeOfMusic.CLASSICALMUSIC);
     }
 }
